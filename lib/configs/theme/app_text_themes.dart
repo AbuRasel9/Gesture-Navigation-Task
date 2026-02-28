@@ -11,7 +11,7 @@ class AppTextThemes {
         displayLarge: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.w400,
-          fontSize: 29,
+          fontSize: 56,
           fontFamily: "ProximaNova",
           decoration: TextDecoration.none,
           decorationThickness: 0,
