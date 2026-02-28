@@ -13,8 +13,7 @@ class ProductsProvider extends ChangeNotifier {
   bool get loading => _loading;
   String? get error => _error;
 
-  // Returns products filtered by category.
-  // 'all' means no filter.
+
   List<Product> productsForTab(String tabKey) {
     if (tabKey == 'all') return _allProducts;
     return _allProducts.where((p) => p.category == tabKey).toList();

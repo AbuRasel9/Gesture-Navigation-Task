@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gesture_coordination_task/configs/extension.dart';
+import 'package:gesture_coordination_task/view/home/home_view.dart';
 import 'package:http/http.dart';
 
 import '../../providers/auth_provider.dart';
@@ -29,11 +30,10 @@ class _LoginViewState extends State<LoginView> {
     final auth = context.read<AuthProvider>();
     final login = await auth.login(_userCtrl.text.trim(), _passCtrl.text.trim());
     if (login && mounted) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (_) => const ProductListingScreen()),
-      // );
-      print("------------------------------------$login");
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const HomeView()),
+      );
     }
   }
 
